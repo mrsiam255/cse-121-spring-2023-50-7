@@ -1,0 +1,51 @@
+#include<iostream>
+#include<string.h>
+#include<conio.h>
+using namespace std;
+int main (){
+string s1="I hate fake stories ";
+string s2="Dominators";
+cout<<"initial : "<<s1<<endl;
+s1.erase(7,4);
+cout<<"After deletion : "<<s1<<endl;
+cout<<"initial :"<<s1<<endl;
+s1.replace(7,10,s2);
+cout<<"After replace : "<<s1<<endl;
+//substring
+char string[1000], sub[1000];
+int position, length, c = 0;
+cout<<"Input a string : ";
+gets(string);
+cout<<"Enter the position and length of substring"<<endl;
+cin>>position>>length;
+while (c < length) {
+sub[c] = string[position+c-1];
+c++;
+}
+sub[c] = '\0';
+cout<<"Required substring is "<<sub<<endl;
+// LENGTH
+char s11[100];
+int len;
+cout<<"ENTER a word:";
+cin>>s11;
+len=strlen(s11);
+cout<<"length of string:"<<len<<endl;
+//copy
+char s21[250];
+char s22[250];
+cout<<"input your string for copying"<<endl;
+cin>>s21;
+strcpy(s22,s21);
+cout<<"After copy the string : "<<s22<<endl;
+//concrate
+char s211[250];
+char s222[250];
+cout<<"input your 1st string"<<endl;
+cin>>s211;
+cout<<"input your 2nd string"<<endl;
+cin>>s222;
+strcat(s211,s222);
+cout<<"After concrate the string : "<<s211;
+return 0;
+}
